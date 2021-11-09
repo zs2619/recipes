@@ -1,0 +1,25 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.101.1/containers/alpine-3.10-git
+{
+	"name": "recipes",
+	// "dockerFile": "Dockerfile",
+	"service": "recipes",
+	"dockerComposeFile": "docker-compose.extend.yml",
+	// Set *default* container specific settings.json values on container create. 
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash"
+	},
+	"workspaceFolder": "/workspace",
+	// Add the IDs of extensions you want installed when the container is created.
+	// Note that some extensions may not work in Alpine Linux. See https://aka.ms/vscode-remote/linux.
+	"appPort": [
+		// "0.0.0.0:2619:2619",
+	],
+	"extensions": [
+		"ms-azuretools.vscode-docker"
+		"golang.go",
+		"zxh404.vscode-proto3"
+	],
+	"remoteEnv": {},
+	"shutdownAction": "none"
+}
