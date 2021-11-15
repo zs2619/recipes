@@ -16,13 +16,6 @@ services:
       - 4222:4222
       - 8222:8222
     restart: always
-  redis-server:
-    image: redis:5.0
-    network_mode: bridge
-    restart: always
-    ports:
-      - 16379:16379
-    command: redis-server  --port 16379
   redis-node-1:
     container_name: redis-7001
     network_mode: bridge
@@ -103,7 +96,7 @@ services:
     network_mode: bridge
     restart: always
     volumes:
-      - /data/mongodb:/data/db
+      - ../mongodb:/data/db
     ports:      
       - 27017:27017
     command: mongod
